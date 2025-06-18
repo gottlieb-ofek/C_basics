@@ -2,8 +2,8 @@
 
 int main() {
 
-    int base;
-    int height;
+    int base = 0;
+    int height = 0;
 
 
     printf("Enter base of the triangle: ");
