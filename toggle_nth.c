@@ -14,6 +14,8 @@ int main() {
 
     int num_after_toggle = 0;
 
+    
+
     printf("After toggling nth bit: %d", num_after_toggle);
     
 
