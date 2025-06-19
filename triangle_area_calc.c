@@ -12,7 +12,7 @@ int main() {
     printf("Enter height of the triangle: ");
     scanf("%d", &height);
 
-    printf("Area of the triangle = %.2f sq. units", ((float)height*base)/2);
+    printf("Area of the triangle = %.2f sq. units", ((float)height * base) / 2);
 
     return 0; 
 }
