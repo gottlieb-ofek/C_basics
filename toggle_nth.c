@@ -12,7 +12,8 @@ int main() {
     printf("Input nth bit to toggle: ");
     scanf("%d", &nth_bit);
     
-    num_after_toggle = num ^ (1 << (nth_bit - 1) );
+    int nth_bit_on = 1 << (nth_bit - 1);
+    num_after_toggle = num ^  nth_bit_on;
 
     printf("After toggling nth bit: %d", num_after_toggle);
 
