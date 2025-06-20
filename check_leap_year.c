@@ -8,7 +8,7 @@ enum return_value_e
 
 int main() {
     enum return_value_e error_code = UNINITIALIZED;
-    int year  = 0;
+    int year = 0;
 
     printf("Input year: ");
     scanf("%d", &year);
