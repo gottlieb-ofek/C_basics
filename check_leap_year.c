@@ -15,10 +15,10 @@ int main() {
 
     if (year % 4 == 0) {
         printf("Yay we have leap year 🤰🏻");
-        goto Exit;
     }
-
-    printf("Nah just a regular year... ");
+    else {
+        printf("Nah just a regular year... ");
+    }
 
 Exit:
     error_code = SUCCESS;
