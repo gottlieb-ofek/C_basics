@@ -22,5 +22,5 @@ int main() {
 
 Exit:
     error_code = SUCCESS;
-    return SUCCESS;
+    return error_code;
 }
