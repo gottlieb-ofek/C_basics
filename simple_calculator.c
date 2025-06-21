@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+enum return_value_e
+{
+    UNINITIALIZED = -1, 
+    SUCCESS = 1,
+    ILLEGAL_OPERATION = 2,
+    DEVISION_BY_ZERO = 3,
+    RECIEVED_NON_FLOAT_VALUE = 4,
+};
+
+int main() {
+    enum return_value_e error_code = UNINITIALIZED;
+    
+    char operation = '\0'; 
+    float num1 = 0;
+    float num2 = 0;
+    float result = 0;
+
+    printf("Please enter number1 operation number2: ");
+    int scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
+
+    if(scanning_return_code != 3){
+        printf("Error: recieved non float value");
+        error_code = RECIEVED_NON_FLOAT_VALUE;
+        goto Exit;
+    }
+
+    switch (operation)
+    {
+    case '+':
+        result = num1 + num2;
+        break;
+
+    case '-':
+        result = num1 - num2;
+        break;
+
+    case '*':
+        result = num1 * num2;
+        break;
+
+    case '/':
+        if(num2 == 0){
+            printf("Error: devision by zero");
+            error_code = DEVISION_BY_ZERO;
+            goto Exit;
+            break;
+        }
+
+        result = num1 / num2;
+        break;
+    
+    default:
+        printf("Error: not a valid operation \n");
+        error_code = ILLEGAL_OPERATION;
+        goto Exit;
+        break;
+    }
+
+    printf("%.2f %c %.2f = %.2f", num1, operation, num2, result);
+
+Exit:
+    error_code = SUCCESS;
+    return error_code;
+}
