@@ -61,7 +61,7 @@ int main() {
 
     printf("%.2f %c %.2f = %.2f", num1, operation, num2, result);
 
-Exit:
     error_code = SUCCESS;
+Exit:
     return error_code;
 }
