@@ -16,9 +16,10 @@ int main() {
     float num1 = 0;
     float num2 = 0;
     float result = 0;
+    int scanning_return_code = 0; 
 
     printf("Please enter number1 operation number2: ");
-    int scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
+    scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
 
     if(scanning_return_code != 3){
         printf("Error: recieved non float value");
