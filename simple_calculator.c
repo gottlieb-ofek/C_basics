@@ -23,7 +23,7 @@ int main() {
     scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
 
     if(scanning_return_code != number_of_input_variables){
-        printf("Error: recieved non float value");
+        printf("Error: recieved illegal input");
         error_code = ILLEGAL_INPUT;
         goto Exit;
     }
