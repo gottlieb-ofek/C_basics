@@ -6,7 +6,7 @@ enum return_value_e
     SUCCESS = 1,
     ILLEGAL_OPERATION = 2,
     DEVISION_BY_ZERO = 3,
-    RECIEVED_NON_FLOAT_VALUE = 4,
+    ILLEGAL_INPUT = 4,
 };
 
 int main() {
@@ -23,7 +23,7 @@ int main() {
 
     if(scanning_return_code != 3){
         printf("Error: recieved non float value");
-        error_code = RECIEVED_NON_FLOAT_VALUE;
+        error_code = ILLEGAL_INPUT;
         goto Exit;
     }
 
