@@ -20,7 +20,6 @@ int main() {
         printf("Nah just a regular year... ");
     }
 
-Exit:
     error_code = SUCCESS;
     return error_code;
 }
