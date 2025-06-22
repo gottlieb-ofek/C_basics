@@ -17,11 +17,12 @@ int main() {
     float num2 = 0;
     float result = 0;
     int scanning_return_code = 0; 
+    int number_of_input_variables = 3 ;
 
     printf("Please enter number1 operation number2: ");
     scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
 
-    if(scanning_return_code != 3){
+    if(scanning_return_code != number_of_input_variables){
         printf("Error: recieved non float value");
         error_code = ILLEGAL_INPUT;
         goto Exit;
