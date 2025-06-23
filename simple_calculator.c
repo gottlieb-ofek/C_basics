@@ -1,5 +1,5 @@
 #include <stdio.h>
-#
+#define NUMBER_OF_INPUT_VARIABLES (3)
 
 enum return_value_e
 {
@@ -18,12 +18,11 @@ int main() {
     float num2 = 0;
     float result = 0;
     int scanning_return_code = -1; 
-    int number_of_input_variables = 3 ;
 
     printf("Please enter number1 operation number2: ");
     scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
 
-    if(scanning_return_code != number_of_input_variables){
+    if(scanning_return_code != NUMBER_OF_INPUT_VARIABLES){
         printf("Error: recieved illegal input");
         error_code = ILLEGAL_INPUT;
         goto Exit;
