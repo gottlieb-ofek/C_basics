@@ -1,4 +1,5 @@
 #include <stdio.h>
+#
 
 enum return_value_e
 {
@@ -16,7 +17,7 @@ int main() {
     float num1 = 0;
     float num2 = 0;
     float result = 0;
-    int scanning_return_code = 0; 
+    int scanning_return_code = -1; 
     int number_of_input_variables = 3 ;
 
     printf("Please enter number1 operation number2: ");
