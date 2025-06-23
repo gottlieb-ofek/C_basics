@@ -5,8 +5,8 @@
 enum return_value_e
 {
     UNINITIALIZED = -1, 
-    SUCCESS = 1,
-    ILLEGAL_INPUT = 2,
+    SUCCESS = 0,
+    ILLEGAL_INPUT = 1,
 };
 
 int main() {
