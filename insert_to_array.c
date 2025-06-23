@@ -11,6 +11,9 @@ enum return_value_e
     ILLEGAL_POSITION = 2,
 };
 
+void print_array(int array[], int array_size);
+void make_place_for_element(int array[], int array_size, int position);
+
 int main() {
     enum return_value_e error_code = UNINITIALIZED;
 
@@ -61,27 +64,31 @@ int main() {
         goto Exit;
     }
 
-    for(int i = 0; i < array_size; i++)
-    {
-        printf("%d ", array[i]);
-    }
+    print_array(array, array_size);
 
-    //shift all element to make place
-    for(int i = array_size; i >= position + 1; i--)
-    {
-        array[i] = array[i-1];
-    }
+    make_place_for_element(array, array_size, position);
     printf(" -> ");
 
     array[position] = element;
 
-    for(int i = 0; i < array_size + 1; i++)
-    {
-        printf("%d ", array[i]);
-    }
+    print_array(array, array_size +1);
     printf("\n");
 
     error_code = SUCCESS;
 Exit:
     return error_code;
+}
+
+void print_array(int array[], int array_size){
+    for(int i = 0; i < array_size; i++)
+    {
+        printf("%d ", array[i]);
+    }
+}
+
+void make_place_for_element(int array[], int array_size, int position){
+    for(int i = array_size; i >= position + 1; i--)
+    {
+        array[i] = array[i-1];
+    }
 }
