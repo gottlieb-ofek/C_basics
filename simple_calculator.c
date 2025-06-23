@@ -1,5 +1,7 @@
 #include <stdio.h>
+
 #define NUMBER_OF_INPUT_VARIABLES (3)
+#define INVALID_SCANF_RESULT (-1)
 
 enum return_value_e
 {
@@ -17,7 +19,7 @@ int main() {
     float num1 = 0;
     float num2 = 0;
     float result = 0;
-    int scanning_return_code = -1; 
+    int scanning_return_code = INVALID_SCANF_RESULT; 
 
     printf("Please enter number1 operation number2: ");
     scanning_return_code = scanf("%f %c %f", &num1, &operation, &num2);
