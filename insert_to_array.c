@@ -6,9 +6,9 @@
 enum return_value_e
 {
     UNINITIALIZED = -1, 
-    SUCCESS = 1,
-    ILLEGAL_INPUT = 2,
-    ILLEGAL_POSITION = 3,
+    SUCCESS = 0,
+    ILLEGAL_INPUT = 1,
+    ILLEGAL_POSITION = 2,
 };
 
 int main() {
@@ -18,7 +18,6 @@ int main() {
     int element = 0;
     int position = 0;
     int current_recieved_element = 0;
-
     int array[ARRAY_MAX_SIZE];
 
     printf("Input size of array: ");
