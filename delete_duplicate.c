@@ -7,8 +7,8 @@
 enum return_value_e
 {
     UNINITIALIZED = -1, 
-    SUCCESS = 1,
-    ILLEGAL_INPUT = 2,
+    SUCCESS = 0,
+    ILLEGAL_INPUT = 1,
 };
 
 bool is_element_in_array(int array[], int element, int array_size);
