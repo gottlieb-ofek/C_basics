@@ -20,7 +20,6 @@ int main() {
     int current_recieved_element = 0;
     int array_index = 0;
     int current_element_to_inspect_duplicates = 0;
-
     int array[ARRAY_MAX_SIZE];
     int no_duplicates_array[ARRAY_MAX_SIZE];
 
