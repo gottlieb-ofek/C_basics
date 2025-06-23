@@ -28,7 +28,7 @@ int main() {
 
     while(0 != number){
         units_digit = number % 10;
-        number = number / 10;
+        number /= 10;
         swapped_number = (swapped_number * 10) + units_digit;
     }
 
