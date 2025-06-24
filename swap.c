@@ -1,6 +1,5 @@
 #include <stdio.h>
-#define NUMBER_OF_INPUT_VARIABLES (1)
-
+#define SUCCESSFUL_SCANF_WITH_ONE_VARIABLES (1)
 
 enum return_value_e
 {
@@ -18,7 +17,7 @@ int main() {
     int units_digit = 0;
 
     printf("Input any number: ");
-    if(scanf("%d", &number) != NUMBER_OF_INPUT_VARIABLES){
+    if(scanf("%d", &number) != SUCCESSFUL_SCANF_WITH_ONE_VARIABLES){
         printf("Error: illegal input");
         error_code = ILLEGAL_INPUT;
         goto Exit;
