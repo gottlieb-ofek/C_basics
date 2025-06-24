@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define NUMBER_OF_INPUT_VARIABLES (1)
+#define SUCCESSFUL_SCANF_WITH_ONE_VARIABLES (1)
 #define ARRAY_MAX_SIZE (100)
 
 enum return_value_e
@@ -24,7 +24,7 @@ int main() {
     int array[ARRAY_MAX_SIZE];
 
     printf("Input size of array: ");
-    if(NUMBER_OF_INPUT_VARIABLES != scanf("%d", &array_size))
+    if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &array_size))
     {
         printf("Error: illegal input");
         error_code = ILLEGAL_INPUT;
@@ -34,7 +34,7 @@ int main() {
     printf("Input array elements: ");
     for(int i = 0; i < array_size; i++)
     {
-        if(NUMBER_OF_INPUT_VARIABLES != scanf("%d", &current_recieved_element)){
+        if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &current_recieved_element)){
             printf("Error: illegal input");
             error_code = ILLEGAL_INPUT;
             goto Exit;
@@ -43,7 +43,7 @@ int main() {
     }
     
     printf("Input element to insert: ");
-    if(NUMBER_OF_INPUT_VARIABLES != scanf("%d", &element))
+    if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &element))
     {
         printf("Error: illegal input");
         error_code = ILLEGAL_INPUT;
@@ -51,7 +51,7 @@ int main() {
     }
     
     printf("Input position where to insert: ");
-    if(NUMBER_OF_INPUT_VARIABLES != scanf("%d", &position))
+    if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &position))
     {
         printf("Error: illegal input");
         error_code = ILLEGAL_INPUT;
