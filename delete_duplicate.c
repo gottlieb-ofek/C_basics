@@ -50,11 +50,26 @@ int construct_new_array_with_no_duplicates(int array[], int array_size, int no_d
     return array_index;
 }
 
+enum return_value_e scan_array(int array_size, int array[]){
+    int current_recieved_element = 0;
+
+    printf("Input array elements: ");
+    for(int i = 0; i < array_size; i++)
+    {
+        if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &current_recieved_element)){
+            printf("Error: illegal input");
+            return ILLEGAL_INPUT;
+        }
+        array[i] = current_recieved_element;
+    }
+    return SUCCESS;
+
+}
+
 int main() {
     enum return_value_e error_code = UNINITIALIZED;
 
     int array_size = 0;
-    int current_recieved_element = 0;
     int no_duplicates_array_size = 0;
     int array[ARRAY_MAX_SIZE] = {0};
     int no_duplicates_array[ARRAY_MAX_SIZE] = {0};
@@ -67,17 +82,8 @@ int main() {
         goto Exit;
     }
 
-    printf("Input array elements: ");
-    for(int i = 0; i < array_size; i++)
-    {
-        if(SUCCESSFUL_SCANF_WITH_ONE_VARIABLES != scanf("%d", &current_recieved_element)){
-            printf("Error: illegal input");
-            error_code = ILLEGAL_INPUT;
-            goto Exit;
-        }
-        array[i] = current_recieved_element;
-    }
-
+    error_code = scan_array(array_size, array);
+    
     no_duplicates_array_size = construct_new_array_with_no_duplicates(array, array_size, no_duplicates_array);
     
     print_array(array, array_size);
