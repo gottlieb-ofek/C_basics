@@ -34,20 +34,20 @@ bool is_element_in_array(int array[], int element, int array_size){
 
 int construct_new_array_with_no_duplicates(int array[], int array_size, int no_duplicates_array[]){
     int current_element_to_inspect_duplicates = 0;
-    int array_index = 0;
+    int duplicate_array_index = 0;
 
     for(int i = 0; i < array_size; i++)
     {
         current_element_to_inspect_duplicates = array[i];
-        if(is_element_in_array(no_duplicates_array, current_element_to_inspect_duplicates, array_index))
+        if(is_element_in_array(no_duplicates_array, current_element_to_inspect_duplicates, duplicate_array_index))
         {
             continue;
         }
-        no_duplicates_array[array_index] = current_element_to_inspect_duplicates;
-        array_index += 1;
+        no_duplicates_array[duplicate_array_index] = current_element_to_inspect_duplicates;
+        duplicate_array_index += 1;
     }
 
-    return array_index;
+    return duplicate_array_index;
 }
 
 enum return_value_e scan_array(int array_size, int array[]){
